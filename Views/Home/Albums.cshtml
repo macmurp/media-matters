@@ -1,0 +1,28 @@
+﻿@model Album
+@{
+    ViewData["Title"] = "Albums Page";
+}
+
+<div class="text-center text-dark">
+    <h1 class="display-4 text-dark">The albums page</h1>
+</div>
+<div class="row justify-content-center">
+    <div class="col-auto">
+        <table class="table-bordered table-responsive text-dark" width="600">
+            @for (int i = 0; i < ViewBag.AlbumCount; i++)
+            {
+                <tr>
+                    <td>
+                        <!--Was having trouble displaying the items in lists here, so I used ViewBag to hold them-->
+                        <img src="~/images/@ViewBag.AlbumList[i].Cover" width="200" />
+                    </td>
+                    <td width="600">
+                        <b>Title:</b> @ViewBag.AlbumList[i].Title <br />
+                        <b>Artist:</b> @ViewBag.AlbumList[i].Artist <br />
+                        <b>Notes:</b> @ViewBag.AlbumList[i].Notes <br />
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

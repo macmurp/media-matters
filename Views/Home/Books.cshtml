@@ -1,0 +1,32 @@
+﻿@model Book
+@{
+    ViewData["Title"] = "Books Page";
+}
+
+<div class="text-center text-dark">
+    <h1 class="display-4 text-dark">The books page</h1>
+</div>
+<div class="row justify-content-center">
+    <div class="col-auto">
+        <table class="table-bordered table-responsive text-dark">
+            @for (int i = 0; i < ViewBag.BookCount; i++)
+            {
+                <tr>
+                    <td>
+                        <!--Was having trouble displaying the items in lists here, so I used ViewBag to hold them-->
+                        <img src="~/images/@ViewBag.BookList[i].Cover" width="200" />
+                    </td>
+                    <td width="600">
+                        <b>Title:</b> @ViewBag.BookList[i].Title <br />
+                        <b>ISBN:</b> @ViewBag.BookList[i].ISBN <br />
+                        <b>Edition:</b> @ViewBag.BookList[i].Edition <br />
+                        <b>Author First Name:</b> @ViewBag.BookList[i].AuthorFirst <br />
+                        <b>Author Last Name:</b> @ViewBag.BookList[i].AuthorLast <br />
+                        <b>Publish Date:</b> @ViewBag.BookList[i].PublishDate <br />
+                        <b>Notes:</b> @ViewBag.BookList[i].Notes <br />
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

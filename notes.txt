@@ -1,0 +1,11 @@
+﻿added MVC base folders
+added wwwroot folder and lib folder
+installed ('twitter') bootstrap and jquery inside lib folder via adding client-side library
+added all required pages under Home folder
+created a HomeController under Controllers to control page redirection
+created _Layout under Shared with a navbar
+added _Viewstart and _Viewimports to allow _Layout to work
+adding "@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers" inside _ViewImports made the nav links function
+created mock up for basic classes under Models
+created list for each class under Controller, using ViewBag to pass it into the View
+used a table with bootstrap styling to display the list items
